@@ -59,6 +59,8 @@ const Header = ({ loader }: HeaderProps) => {
         )}
         style={{
           background: isActive ? "hsl(var(--background) / .8)" : "transparent",
+          backdropFilter: isActive ? "blur(12px)" : "none",
+          WebkitBackdropFilter: isActive ? "blur(12px)" : "none",
         }}
         initial={{
           y: -80,
