@@ -50,7 +50,7 @@ export default function EducationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mb-8 backdrop-blur-xl bg-zinc-900/60 border border-white/10 border-l-4 border-l-blue-500 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl hover:border-blue-500/30 transition-all duration-300 relative overflow-hidden group"
+          className="mb-8 backdrop-blur-xl bg-zinc-900/80 border border-white/10 border-l-4 border-l-blue-500 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl hover:border-blue-500/30 transition-all duration-300 relative overflow-hidden group"
         >
           <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl group-hover:bg-blue-500/10 transition-all pointer-events-none" />
 
@@ -71,13 +71,13 @@ export default function EducationSection() {
                 </h3>
               )}
 
-              <div className="flex items-center gap-2 text-zinc-300 font-medium text-base sm:text-lg">
+              <div className="flex items-center gap-2 text-zinc-200 font-medium text-base sm:text-lg">
                 <Building2 className="w-5 h-5 text-purple-400 shrink-0" />
                 <span>{primaryEdu.institution}</span>
               </div>
             </div>
 
-            <div className="shrink-0 p-6 rounded-2xl bg-zinc-800/40 border border-white/10 flex flex-col items-center justify-center text-center space-y-3 lg:w-64">
+            <div className="shrink-0 p-6 rounded-2xl bg-zinc-800/60 border border-white/10 flex flex-col items-center justify-center text-center space-y-3 lg:w-64">
               <div className="flex items-center gap-1.5 text-xs font-mono text-blue-300 bg-blue-500/20 border border-blue-500/30 px-3.5 py-1.5 rounded-full">
                 <Calendar className="w-3.5 h-3.5" />
                 <span>{primaryEdu.duration}</span>
@@ -99,7 +99,7 @@ export default function EducationSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="backdrop-blur-xl bg-zinc-900/40 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-xl hover:border-purple-500/30 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+            className="backdrop-blur-xl bg-zinc-900/80 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-xl hover:border-purple-500/30 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-full blur-2xl group-hover:bg-purple-500/10 transition-all pointer-events-none" />
 
@@ -111,7 +111,7 @@ export default function EducationSection() {
                 >
                   Schooling
                 </Badge>
-                <div className="flex items-center gap-1.5 text-xs font-mono text-zinc-400 bg-zinc-800/80 border border-white/10 px-3 py-1 rounded-full">
+                <div className="flex items-center gap-1.5 text-xs font-mono text-zinc-300 bg-zinc-800/80 border border-white/10 px-3 py-1 rounded-full">
                   <Calendar className="w-3.5 h-3.5 text-blue-400" />
                   <span>{item.duration}</span>
                 </div>
@@ -121,7 +121,7 @@ export default function EducationSection() {
                 {item.degree}
               </h4>
 
-              <div className="flex items-start gap-2 text-zinc-300 font-medium text-sm sm:text-base">
+              <div className="flex items-start gap-2 text-zinc-200 font-medium text-sm sm:text-base">
                 <Building2 className="w-4 h-4 text-purple-400 shrink-0 mt-1" />
                 <span>{item.institution}</span>
               </div>
