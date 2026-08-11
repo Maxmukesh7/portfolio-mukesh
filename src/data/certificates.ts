@@ -7,7 +7,7 @@ export type Certificate = {
   iconType: "python" | "aws" | "security" | "devops" | "secops";
   iconBg: string;
   badgeColor: string;
-  fileSrc: string;
+  driveUrl: string;
 };
 
 export const CERTIFICATES: Certificate[] = [
@@ -20,7 +20,7 @@ export const CERTIFICATES: Certificate[] = [
     iconType: "python",
     iconBg: "bg-blue-500/10 border-blue-500/20",
     badgeColor: "border-blue-500/30 text-blue-400 bg-blue-500/10",
-    fileSrc: "/certificates/scaler-python.pdf",
+    driveUrl: "https://drive.google.com/file/d/1-3DPxcQg4TmWvzbLbkBRebwPyFforiGJ/view?usp=sharing",
   },
   {
     id: "aws-cloud-practitioner",
@@ -31,7 +31,7 @@ export const CERTIFICATES: Certificate[] = [
     iconType: "aws",
     iconBg: "bg-amber-500/10 border-amber-500/20",
     badgeColor: "border-amber-500/30 text-amber-400 bg-amber-500/10",
-    fileSrc: "/certificates/aws-cloud-practitioner.pdf",
+    driveUrl: "https://drive.google.com/file/d/17zBDDbrywTAytBpvzFhoVYVv05VIAw3x/view?usp=sharing",
   },
   {
     id: "simplilearn-cybersecurity",
@@ -42,7 +42,7 @@ export const CERTIFICATES: Certificate[] = [
     iconType: "security",
     iconBg: "bg-purple-500/10 border-purple-500/20",
     badgeColor: "border-purple-500/30 text-purple-400 bg-purple-500/10",
-    fileSrc: "/certificates/simplilearn-cybersecurity.pdf",
+    driveUrl: "https://drive.google.com/file/d/1aRtXCssnKK9Imb8X2XTxC98gPMs4jXTE/view?usp=sharing",
   },
   {
     id: "microsoft-operate-devops",
@@ -53,7 +53,7 @@ export const CERTIFICATES: Certificate[] = [
     iconType: "devops",
     iconBg: "bg-sky-500/10 border-sky-500/20",
     badgeColor: "border-sky-500/30 text-sky-400 bg-sky-500/10",
-    fileSrc: "/certificates/microsoft-operate-devops.pdf",
+    driveUrl: "https://drive.google.com/file/d/17Wir8_uHo9coMAuVE7i02pjmqHFH9E21/view?usp=sharing",
   },
   {
     id: "microsoft-secure-pipelines",
@@ -64,7 +64,7 @@ export const CERTIFICATES: Certificate[] = [
     iconType: "secops",
     iconBg: "bg-emerald-500/10 border-emerald-500/20",
     badgeColor: "border-emerald-500/30 text-emerald-400 bg-emerald-500/10",
-    fileSrc: "/certificates/microsoft-secure-pipelines.pdf",
+    driveUrl: "https://drive.google.com/file/d/1Rdc4DDfrLj5A3wwRqCQeSnkk7_lmYNBY/view?usp=sharing",
   },
 ];
 
