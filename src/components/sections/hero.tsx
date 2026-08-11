@@ -87,8 +87,7 @@ const HeroSection = () => {
 
               <div className="mt-8 md:mt-10 flex flex-col gap-4 w-full sm:w-fit">
                 <a
-                  href="/resume/resume.pdf"
-                  download="Mukesh_Kumar_Resume.pdf"
+                  href="https://drive.google.com/file/d/1lvNzzlnWA-O7Pytxobaphpew4Tncxh59/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto"
@@ -96,7 +95,7 @@ const HeroSection = () => {
                   <BoxReveal delay={2} width="100%">
                     <Button className="flex items-center justify-center gap-2 w-full px-6 py-3 text-base">
                       <File size={20} />
-                      <p>Download Resume</p>
+                      <p>View Resume</p>
                     </Button>
                   </BoxReveal>
                 </a>

@@ -20,7 +20,7 @@ const config = {
   phone: "+91 6385899326",
   location: "Coimbatore, Tamil Nadu, India",
   site: "https://your-portfolio.vercel.app",
-  resume: "https://example.com/resume.pdf",
+  resume: "https://drive.google.com/file/d/1lvNzzlnWA-O7Pytxobaphpew4Tncxh59/view?usp=sharing",
 
   // for github stars button
   githubUsername: "Maxmukesh7",

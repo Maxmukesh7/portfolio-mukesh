@@ -226,8 +226,7 @@ export default function AboutPage() {
             {/* Action Buttons */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <a
-                href="/resume/resume.pdf"
-                download="Mukesh_Kumar_Resume.pdf"
+                href="https://drive.google.com/file/d/1lvNzzlnWA-O7Pytxobaphpew4Tncxh59/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -236,7 +235,7 @@ export default function AboutPage() {
                   className="rounded-2xl text-base px-7 py-6 font-medium bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white shadow-lg shadow-blue-500/25 border border-white/20 transition-all gap-2"
                 >
                   <FileText className="w-5 h-5" />
-                  <span>Download Resume</span>
+                  <span>View Resume</span>
                   <ArrowUpRight className="w-4 h-4 ml-1 opacity-80" />
                 </Button>
               </a>
