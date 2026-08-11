@@ -84,7 +84,7 @@ function Page() {
                         <Image
                           src={image}
                           alt={project.name}
-                          className="w-[300px] h-[200px] object-cover"
+                          className="w-[300px] h-[200px] object-contain p-1"
                           width={300}
                           height={200}
                         />

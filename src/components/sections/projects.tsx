@@ -9,11 +9,20 @@ import {
   BookOpen,
   CheckCircle2,
   Sparkles,
+  Maximize2,
 } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import projects, { FeaturedProject } from "@/data/projects";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+  DialogHeader,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 export default function ProjectsSection() {
   return (
@@ -75,18 +84,47 @@ export default function ProjectsSection() {
                   isEven ? "lg:flex-row-reverse" : "lg:flex-row"
                 } items-stretch gap-8 lg:gap-12`}
               >
-                {/* Large Project Image Container */}
-                <div className="w-full lg:w-1/2 relative flex items-center justify-center rounded-2xl overflow-hidden border border-white/10 bg-zinc-950/80 shadow-inner group/img">
-                  <div className="relative w-full aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={project.src}
-                      alt={project.title}
-                      fill
-                      className="object-cover object-top group-hover/img:scale-105 transition-transform duration-700 ease-out"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent opacity-60" />
-                  </div>
-                </div>
+                {/* Large Project Image Container with Full Image Lightbox */}
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="w-full lg:w-1/2 flex items-center justify-center">
+                      <div className="w-full relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group/img cursor-pointer">
+                        <div className="relative w-full h-auto overflow-hidden rounded-2xl">
+                          <Image
+                            src={project.src}
+                            alt={project.title}
+                            width={1200}
+                            height={675}
+                            className="w-full h-auto block object-contain group-hover/img:scale-105 transition-transform duration-700 ease-out"
+                          />
+                          {/* Subtle hover overlay hint */}
+                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-xs font-medium text-white backdrop-blur-[2px]">
+                            <Maximize2 className="w-4 h-4 text-blue-400" />
+                            <span>Click to view full image</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </DialogTrigger>
+
+                  <DialogContent className="max-w-[95vw] sm:max-w-[90vw] max-h-[92vh] bg-zinc-950/95 border border-white/15 p-4 sm:p-6 rounded-2xl flex flex-col items-center justify-center overflow-hidden">
+                    <DialogHeader className="w-full mb-3 text-left">
+                      <DialogTitle className="text-white text-lg font-semibold flex items-center gap-2 font-display">
+                        {project.title}
+                      </DialogTitle>
+                      <DialogDescription className="text-xs text-zinc-400">
+                        {project.category} screenshot
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="relative w-full h-[78vh] flex items-center justify-center overflow-hidden bg-zinc-950/50 rounded-xl p-2">
+                      <img
+                        src={project.src}
+                        alt={project.title}
+                        className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                      />
+                    </div>
+                  </DialogContent>
+                </Dialog>
 
                 {/* Project Details Content */}
                 <div className="w-full lg:w-1/2 flex flex-col justify-between space-y-6">
