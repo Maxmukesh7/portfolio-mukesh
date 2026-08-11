@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   Home,
-  User,
   Code2,
   GraduationCap,
   Award,
@@ -23,11 +22,10 @@ interface IndexProps {
 
 const MENU_ITEMS = [
   { title: "Home", href: "/", icon: Home },
-  { title: "About", href: "/about", icon: User },
   { title: "Skills", href: "/#skills", icon: Code2 },
+  { title: "Projects", href: "/#projects", icon: Briefcase },
   { title: "Education", href: "/#education", icon: GraduationCap },
   { title: "Certifications", href: "/#certifications", icon: Award },
-  { title: "Projects", href: "/#projects", icon: Briefcase },
   { title: "Contact", href: "/#contact", icon: Mail },
 ];
 
