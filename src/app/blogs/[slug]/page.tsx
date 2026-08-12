@@ -1,4 +1,3 @@
-import React from "react";
 import { getBlogPost, getBlogPosts } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import ScrollProgress from "@/components/ui/scroll-progress";

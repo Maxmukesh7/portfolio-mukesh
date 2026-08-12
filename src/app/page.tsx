@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import SmoothScroll from "@/components/smooth-scroll";
 import { cn } from "@/lib/utils";
 import AnimatedBackground from "@/components/animated-background";

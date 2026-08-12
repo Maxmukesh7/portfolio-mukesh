@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -21,16 +20,10 @@ import {
   RiReactjsFill,
   RiNodejsFill,
 } from "react-icons/ri";
-import {
-  SiPython,
-  SiTypescript,
-  SiMongodb,
-  SiPostgresql,
-} from "react-icons/si";
+import { SiPython } from "react-icons/si";
 import { FaJava } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { config } from "@/data/config";
 
 const PERSONAL_INFO = [
   {

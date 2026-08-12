@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import { GraduationCap, Building2, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";

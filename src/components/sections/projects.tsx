@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -14,7 +13,7 @@ import {
 import { SiGithub } from "react-icons/si";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import projects, { FeaturedProject } from "@/data/projects";
+import projects from "@/data/projects";
 import {
   Dialog,
   DialogContent,
