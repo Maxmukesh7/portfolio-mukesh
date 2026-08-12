@@ -12,10 +12,10 @@ import {
 } from "lucide-react";
 import {
   SiGithub,
-  SiLinkedin,
   SiLeetcode,
   SiGmail,
 } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa6";
 import { Badge } from "@/components/ui/badge";
 import { CONTACT_DETAILS, SOCIAL_LINKS } from "@/data/socialLinks";
 
@@ -38,7 +38,7 @@ export default function ContactSection() {
       case "github":
         return <SiGithub className="w-6 h-6 text-white group-hover:text-[#2ea44f] transition-colors" />;
       case "linkedin":
-        return <SiLinkedin className="w-6 h-6 text-[#0a66c2]" />;
+        return <FaLinkedin className="w-6 h-6 text-[#0a66c2]" />;
       case "leetcode":
         return <SiLeetcode className="w-6 h-6 text-[#ffa116]" />;
       case "gmail":

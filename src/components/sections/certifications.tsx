@@ -9,8 +9,8 @@ import {
   Award,
   ExternalLink,
 } from "lucide-react";
-import { SiPython, SiMicrosoft } from "react-icons/si";
-import { FaAws } from "react-icons/fa6";
+import { SiPython } from "react-icons/si";
+import { FaAws, FaMicrosoft } from "react-icons/fa6";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CERTIFICATES } from "@/data/certificates";
@@ -25,9 +25,9 @@ export default function CertificationsSection() {
       case "security":
         return <ShieldCheck className="w-5 h-5 text-purple-400" />;
       case "devops":
-        return <SiMicrosoft className="w-5 h-5 text-sky-400" />;
+        return <FaMicrosoft className="w-5 h-5 text-sky-400" />;
       case "secops":
-        return <SiMicrosoft className="w-5 h-5 text-emerald-400" />;
+        return <FaMicrosoft className="w-5 h-5 text-emerald-400" />;
       default:
         return <Award className="w-5 h-5 text-blue-400" />;
     }
