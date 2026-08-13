@@ -103,7 +103,7 @@ export const PROJECTS: FeaturedProject[] = [
       "Admin Dashboard",
     ],
     techStack: ["Python", "Django", "PostgreSQL", "HTML", "CSS", "JavaScript"],
-    src: "/assets/projects-screenshots/lohusa-platform/lohusa1.png",
+    src: "/assets/projects-screenshots/fruitcart.png",
     github: "https://github.com/Maxmukesh7/cart-fruit/tree/main/fruitcart",
     live: "https://cart-fruit.onrender.com/",
   },

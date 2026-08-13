@@ -50,6 +50,13 @@ const PROJECTS = [
       "/assets/projects-screenshots/webrtc-pro/webrtc2.png",
     ],
   },
+  {
+    id: 5,
+    name: "Fruit Cart",
+    description: `Django ve PostgreSQL altyapısıyla geliştirilen, ürün arama, sepet yönetimi ve kullanıcı kimlik doğrulaması sunan responsive e-ticaret uygulaması.`,
+    link: "https://cart-fruit.onrender.com/",
+    images: ["/assets/projects-screenshots/fruitcart.png"],
+  },
 ];
 
 function Page() {
