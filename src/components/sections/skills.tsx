@@ -325,10 +325,6 @@ export default function SkillsSection() {
                       {category.title}
                     </h3>
                   </div>
-
-                  <span className="text-xs font-mono text-zinc-400 bg-zinc-800/80 border border-white/10 px-2.5 py-1 rounded-full">
-                    {category.skills.length} Items
-                  </span>
                 </div>
 
                 {/* Skills Grid */}

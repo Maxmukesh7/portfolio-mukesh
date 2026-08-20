@@ -45,26 +45,16 @@ const HeroSection = () => {
                 </BlurIn>
 
                 <BlurIn delay={1}>
-                  <Tooltip delayDuration={300}>
-                    <TooltipTrigger asChild>
-                      <h1
-                        className={cn(
-                          "-ml-[4px] font-thin text-transparent text-slate-800 text-left",
-                          "text-[clamp(3rem,12vw,4.5rem)] sm:text-[clamp(4rem,8vw,6rem)] md:text-[clamp(5rem,9vw,8rem)]",
-                          "leading-[0.95] cursor-default text-edge-outline font-display tracking-tight"
-                        )}
-                      >
-                        <span className="block whitespace-nowrap">Mukesh</span>
-                        <span className="block whitespace-nowrap">Kumar R</span>
-                      </h1>
-                    </TooltipTrigger>
-                    <TooltipContent
-                      side="top"
-                      className="dark:bg-white dark:text-black"
-                    >
-                      Software Developer | Full Stack Developer
-                    </TooltipContent>
-                  </Tooltip>
+                  <h1
+                    className={cn(
+                      "-ml-[4px] font-thin text-transparent text-slate-800 text-left",
+                      "text-[clamp(3rem,12vw,4.5rem)] sm:text-[clamp(4rem,8vw,6rem)] md:text-[clamp(5rem,9vw,8rem)]",
+                      "leading-[0.95] cursor-default text-edge-outline font-display tracking-tight"
+                    )}
+                  >
+                    <span className="block whitespace-nowrap">Mukesh</span>
+                    <span className="block whitespace-nowrap">Kumar R</span>
+                  </h1>
                 </BlurIn>
 
                 <BlurIn delay={1.2}>
