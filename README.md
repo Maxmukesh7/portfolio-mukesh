@@ -39,7 +39,7 @@ A modern, responsive, and performance-focused personal developer portfolio built
 ### Automated Resume Analyzer
 A MERN Stack application that analyzes resumes using AI and NLP. It extracts candidate skills, calculates ATS scores, ranks resumes, and generates AI-powered summaries to streamline recruitment.
 - **GitHub**: [https://github.com/Maxmukesh7/-resume-analyzer--mern](https://github.com/Maxmukesh7/-resume-analyzer--mern)
-- **Live Demo**: Not deployed
+- **Live Demo**: [https://resume-analyzer-0g7r.onrender.com](https://resume-analyzer-0g7r.onrender.com)
 
 ### SafePipe — DevSecOps Project
 A DevSecOps security solution that automatically scans source code and Git repositories for exposed secrets (API keys, credentials, private keys) before deployment.

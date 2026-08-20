@@ -104,8 +104,9 @@ export const PROJECTS: FeaturedProject[] = [
       "NLP",
       "Gemini AI",
     ],
-    src: "/assets/projects-screenshots/mern-chat/mern1.png",
+    src: "/assets/projects-screenshots/resume-analyzer.png",
     github: "https://github.com/Maxmukesh7/-resume-analyzer--mern",
+    live: "https://resume-analyzer-0g7r.onrender.com",
   },
 ];
 
