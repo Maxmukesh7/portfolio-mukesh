@@ -47,9 +47,9 @@ const HeroSection = () => {
                 <BlurIn delay={1}>
                   <h1
                     className={cn(
-                      "-ml-[4px] font-thin text-transparent text-slate-800 text-left",
+                      "-ml-[4px] font-thin text-slate-900 dark:text-white text-left",
                       "text-[clamp(3rem,12vw,4.5rem)] sm:text-[clamp(4rem,8vw,6rem)] md:text-[clamp(5rem,9vw,8rem)]",
-                      "leading-[0.95] cursor-default text-edge-outline font-display tracking-tight"
+                      "leading-[0.95] cursor-default font-display tracking-tight"
                     )}
                   >
                     <span className="block whitespace-nowrap">Mukesh</span>

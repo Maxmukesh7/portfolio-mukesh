@@ -52,17 +52,17 @@ export default function CertificationsSection() {
       >
         <Badge
           variant="outline"
-          className="px-4 py-1.5 text-xs font-mono tracking-widest uppercase bg-purple-500/10 border-purple-500/30 text-purple-400 rounded-full inline-flex items-center gap-2"
+          className="px-4 py-1.5 text-xs font-mono tracking-widest uppercase bg-purple-500/10 border-purple-500/30 text-purple-600 dark:text-purple-400 rounded-full inline-flex items-center gap-2"
         >
           <Sparkles className="w-3.5 h-3.5" />
           Professional Certifications
         </Badge>
 
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white font-display">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-white font-display">
           Certifications
         </h2>
 
-        <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-400 leading-relaxed">
+        <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
           Professional certifications demonstrating continuous technical learning and mastery.
         </p>
       </motion.div>
@@ -77,35 +77,35 @@ export default function CertificationsSection() {
             transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
             whileHover={{ y: -6, scale: 1.02 }}
-            className="backdrop-blur-xl bg-zinc-900/60 border border-white/10 rounded-3xl p-6 sm:p-7 shadow-2xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+            className="backdrop-blur-md bg-white/55 hover:bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-white/10 rounded-3xl p-6 sm:p-7 shadow-xl dark:shadow-2xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
             {/* Ambient Corner Glow Accent */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-all pointer-events-none" />
 
             <div className="space-y-4">
               {/* Provider Logo Header */}
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center justify-between border-b border-zinc-200 dark:border-white/10 pb-4">
                 <div className="flex items-center gap-3">
                   <div
                     className={`p-2.5 rounded-2xl border ${cert.iconBg} shrink-0`}
                   >
                     {getProviderIcon(cert.iconType)}
                   </div>
-                  <span className="text-xs font-mono tracking-wider text-zinc-400 uppercase">
+                  <span className="text-xs font-mono tracking-wider text-zinc-500 dark:text-zinc-400 uppercase">
                     {cert.provider}
                   </span>
                 </div>
               </div>
 
               {/* Certificate Title */}
-              <h3 className="text-lg font-bold text-white font-display tracking-tight group-hover:text-blue-300 transition-colors leading-snug line-clamp-3">
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white font-display tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors leading-snug line-clamp-3">
                 {cert.title}
               </h3>
 
               {/* Certificate Meta Info */}
               <div className="space-y-2.5 pt-1">
-                <div className="flex items-center gap-2 text-xs font-medium text-zinc-300">
-                  <Building2 className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+                <div className="flex items-center gap-2 text-xs font-medium text-zinc-700 dark:text-zinc-300">
+                  <Building2 className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 shrink-0" />
                   <span>{cert.provider}</span>
                 </div>
 
@@ -117,8 +117,8 @@ export default function CertificationsSection() {
                     {cert.category}
                   </Badge>
 
-                  <div className="flex items-center gap-1.5 text-xs font-mono text-zinc-400">
-                    <Calendar className="w-3.5 h-3.5 text-blue-400" />
+                  <div className="flex items-center gap-1.5 text-xs font-mono text-zinc-500 dark:text-zinc-400">
+                    <Calendar className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
                     <span>{cert.completion}</span>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default function CertificationsSection() {
             </div>
 
             {/* View Certificate Button */}
-            <div className="pt-4 mt-6 border-t border-white/10">
+            <div className="pt-4 mt-6 border-t border-zinc-200 dark:border-white/10">
               <a
                 href={cert.driveUrl}
                 target="_blank"
@@ -136,7 +136,7 @@ export default function CertificationsSection() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full justify-between rounded-xl text-xs font-medium border-white/15 bg-zinc-800/80 hover:bg-blue-600/20 hover:border-blue-500/40 text-zinc-200 hover:text-white transition-all group/btn"
+                  className="w-full justify-between rounded-xl text-xs font-medium border-zinc-300 dark:border-white/15 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800/80 dark:hover:bg-blue-600/20 dark:hover:border-blue-500/40 text-zinc-800 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white transition-all group/btn"
                 >
                   <span>View Certificate →</span>
                   <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />

@@ -82,7 +82,7 @@ const STAT_CARDS = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-black/90 text-zinc-100 font-sans pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen relative overflow-hidden bg-slate-50 dark:bg-black/90 text-zinc-900 dark:text-zinc-100 font-sans pt-24 pb-20 px-4 sm:px-6 lg:px-8">
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
       <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none -z-10" />
@@ -100,12 +100,12 @@ export default function AboutPage() {
           >
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Glassmorphism Background Card */}
-              <div className="relative rounded-3xl p-6 sm:p-8 backdrop-blur-xl bg-zinc-900/60 border border-white/10 shadow-2xl shadow-blue-950/20 group">
+              <div className="relative rounded-3xl p-6 sm:p-8 backdrop-blur-xl bg-white/80 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-white/10 shadow-xl dark:shadow-2xl shadow-blue-950/10 dark:shadow-blue-950/20 group">
                 {/* Glowing Outer Border Effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl opacity-20 group-hover:opacity-40 transition-opacity blur-md pointer-events-none" />
 
                 {/* Profile Image Wrapper */}
-                <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-white/10 shadow-inner bg-zinc-800/80">
+                <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-zinc-200 dark:border-white/10 shadow-inner bg-zinc-100 dark:bg-zinc-800/80">
                   <Image
                     src="/assets/me.jpg"
                     alt="Mukesh Kumar R"
@@ -119,7 +119,7 @@ export default function AboutPage() {
                     <p className="text-xl font-bold text-white font-display">
                       Mukesh Kumar R
                     </p>
-                    <p className="text-xs text-blue-400 font-mono">
+                    <p className="text-xs text-blue-300 font-mono">
                       Cyber Security & Software Dev
                     </p>
                   </div>
@@ -129,28 +129,28 @@ export default function AboutPage() {
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -right-4 backdrop-blur-md bg-zinc-900/80 border border-white/15 px-3.5 py-2 rounded-2xl flex items-center gap-2 shadow-xl"
+                  className="absolute -top-4 -right-4 backdrop-blur-md bg-white/90 dark:bg-zinc-900/80 border border-zinc-200 dark:border-white/15 px-3.5 py-2 rounded-2xl flex items-center gap-2 shadow-lg dark:shadow-xl"
                 >
-                  <RiReactjsFill className="w-5 h-5 text-cyan-400" />
-                  <span className="text-xs font-semibold text-zinc-200">React & Web Dev</span>
+                  <RiReactjsFill className="w-5 h-5 text-cyan-500 dark:text-cyan-400" />
+                  <span className="text-xs font-semibold text-zinc-800 dark:text-zinc-200">React & Web Dev</span>
                 </motion.div>
 
                 <motion.div
                   animate={{ y: [0, 8, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-4 -left-4 backdrop-blur-md bg-zinc-900/80 border border-white/15 px-3.5 py-2 rounded-2xl flex items-center gap-2 shadow-xl"
+                  className="absolute -bottom-4 -left-4 backdrop-blur-md bg-white/90 dark:bg-zinc-900/80 border border-zinc-200 dark:border-white/15 px-3.5 py-2 rounded-2xl flex items-center gap-2 shadow-lg dark:shadow-xl"
                 >
-                  <RiNodejsFill className="w-5 h-5 text-emerald-400" />
-                  <span className="text-xs font-semibold text-zinc-200">Node & REST APIs</span>
+                  <RiNodejsFill className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                  <span className="text-xs font-semibold text-zinc-800 dark:text-zinc-200">Node & REST APIs</span>
                 </motion.div>
 
                 <motion.div
                   animate={{ y: [0, -6, 0] }}
                   transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  className="absolute top-1/2 -left-6 -translate-y-1/2 hidden sm:flex backdrop-blur-md bg-zinc-900/80 border border-white/15 p-2.5 rounded-2xl items-center gap-2 shadow-xl"
+                  className="absolute top-1/2 -left-6 -translate-y-1/2 hidden sm:flex backdrop-blur-md bg-white/90 dark:bg-zinc-900/80 border border-zinc-200 dark:border-white/15 p-2.5 rounded-2xl items-center gap-2 shadow-lg dark:shadow-xl"
                 >
                   <FaJava className="w-5 h-5 text-amber-500" />
-                  <SiPython className="w-5 h-5 text-blue-400" />
+                  <SiPython className="w-5 h-5 text-blue-500 dark:text-blue-400" />
                 </motion.div>
               </div>
             </div>
@@ -168,19 +168,19 @@ export default function AboutPage() {
             <div>
               <Badge
                 variant="outline"
-                className="px-3.5 py-1 text-xs font-mono tracking-widest uppercase bg-blue-500/10 border-blue-500/30 text-blue-400 rounded-full mb-3"
+                className="px-3.5 py-1 text-xs font-mono tracking-widest uppercase bg-blue-500/10 border-blue-500/30 text-blue-600 dark:text-blue-400 rounded-full mb-3"
               >
                 Who I Am
               </Badge>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-display">
-                About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">Me</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 dark:text-white font-display">
+                About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 dark:from-blue-400 dark:via-indigo-300 dark:to-purple-400">Me</span>
               </h1>
             </div>
 
             {/* Description Paragraphs */}
-            <div className="space-y-4 text-zinc-300 text-base sm:text-lg leading-relaxed">
+            <div className="space-y-4 text-zinc-600 dark:text-zinc-300 text-base sm:text-lg leading-relaxed">
               <p>
-                I&apos;m <strong className="text-white font-semibold">Mukesh Kumar</strong>, a Computer Science Engineering student specializing in Cyber Security with a strong passion for Software Development. I enjoy building modern, scalable, and user-friendly web applications that solve real-world problems.
+                I&apos;m <strong className="text-zinc-900 dark:text-white font-semibold">Mukesh Kumar</strong>, a Computer Science Engineering student specializing in Cyber Security with a strong passion for Software Development. I enjoy building modern, scalable, and user-friendly web applications that solve real-world problems.
               </p>
               <p>
                 I continuously improve my skills by building full-stack applications using React, Node.js, Express.js, MongoDB, Java, Python, and REST APIs. My focus is on writing clean, maintainable code while creating fast and responsive user experiences.
@@ -199,16 +199,16 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.08 }}
                   viewport={{ once: true }}
-                  className="backdrop-blur-md bg-zinc-900/40 border border-white/10 rounded-2xl p-4 flex items-start gap-3.5 hover:border-blue-500/30 transition-colors"
+                  className="backdrop-blur-md bg-white/80 dark:bg-zinc-900/40 border border-zinc-200/80 dark:border-white/10 rounded-2xl p-4 flex items-start gap-3.5 hover:border-blue-500/40 transition-colors shadow-sm dark:shadow-none"
                 >
-                  <div className="p-2 rounded-xl bg-zinc-800/80 border border-white/5 shrink-0">
+                  <div className="p-2 rounded-xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-white/5 shrink-0">
                     {item.icon}
                   </div>
                   <div>
-                    <p className="text-xs font-mono text-zinc-400 uppercase tracking-wider">
+                    <p className="text-xs font-mono text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
                       {item.label}
                     </p>
-                    <p className="text-sm font-semibold text-zinc-100 mt-0.5">
+                    <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mt-0.5">
                       {item.value}
                     </p>
                   </div>
@@ -237,7 +237,7 @@ export default function AboutPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="rounded-2xl text-base px-7 py-6 font-medium border-white/15 bg-zinc-900/60 hover:bg-zinc-800 text-zinc-200 hover:text-white transition-all"
+                  className="rounded-2xl text-base px-7 py-6 font-medium border-zinc-300 dark:border-white/15 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900/60 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white transition-all"
                 >
                   Contact Me
                 </Button>
@@ -257,23 +257,23 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="backdrop-blur-xl bg-zinc-900/50 border border-white/10 rounded-3xl p-6 relative overflow-hidden group hover:border-blue-500/40 transition-all shadow-xl"
+                className="backdrop-blur-xl bg-white/80 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-white/10 rounded-3xl p-6 relative overflow-hidden group hover:border-blue-500/40 transition-all shadow-md dark:shadow-xl"
               >
                 <div className="absolute top-0 right-0 w-28 h-28 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-all pointer-events-none" />
 
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 rounded-2xl bg-zinc-800/80 border border-white/10">
+                  <div className="p-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-white/10">
                     {card.icon}
                   </div>
-                  <span className="text-2xl font-bold font-mono text-white tracking-tight">
+                  <span className="text-2xl font-bold font-mono text-zinc-900 dark:text-white tracking-tight">
                     {card.value}
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-zinc-100 font-display">
+                <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100 font-display">
                   {card.label}
                 </h3>
-                <p className="text-xs text-zinc-400 mt-1.5 leading-relaxed font-sans">
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1.5 leading-relaxed font-sans">
                   {card.desc}
                 </p>
               </motion.div>

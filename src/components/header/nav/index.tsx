@@ -48,10 +48,10 @@ const Index: React.FC<IndexProps> = ({ setIsActive }) => {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -10, scale: 0.95 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="fixed right-4 sm:right-8 top-20 w-[calc(100vw-2rem)] max-w-xs sm:max-w-sm sm:w-72 max-h-[calc(100vh-6rem)] overflow-y-auto overflow-x-hidden backdrop-blur-2xl bg-zinc-950/90 border border-white/15 rounded-2xl p-3 shadow-2xl shadow-black/80 z-[9999] font-sans"
+      className="fixed right-4 sm:right-8 top-20 w-[calc(100vw-2rem)] max-w-xs sm:max-w-sm sm:w-72 max-h-[calc(100vh-6rem)] overflow-y-auto overflow-x-hidden backdrop-blur-2xl bg-white/95 dark:bg-zinc-950/90 border border-zinc-200 dark:border-white/15 rounded-2xl p-3 shadow-2xl shadow-zinc-400/20 dark:shadow-black/80 z-[9999] font-sans"
     >
-      <div className="flex items-center justify-between px-3 py-2 mb-1 border-b border-white/10">
-        <span className="text-xs font-mono tracking-widest text-zinc-400 uppercase">
+      <div className="flex items-center justify-between px-3 py-2 mb-1 border-b border-zinc-200 dark:border-white/10">
+        <span className="text-xs font-mono tracking-widest text-zinc-500 dark:text-zinc-400 uppercase">
           Navigation
         </span>
         <FunnyThemeToggle className="w-5 h-5 flex md:hidden" />
@@ -100,8 +100,8 @@ const Index: React.FC<IndexProps> = ({ setIsActive }) => {
               className={cn(
                 "flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-medium transition-all group",
                 isActive
-                  ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
-                  : "text-zinc-300 hover:text-white hover:bg-white/10"
+                  ? "bg-blue-600/10 dark:bg-blue-600/20 text-blue-600 dark:text-blue-400 border border-blue-500/30 font-semibold"
+                  : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-white/10"
               )}
             >
               <div className="flex items-center gap-3">
@@ -109,8 +109,8 @@ const Index: React.FC<IndexProps> = ({ setIsActive }) => {
                   className={cn(
                     "p-1.5 rounded-lg transition-colors",
                     isActive
-                      ? "bg-blue-500/20 text-blue-400"
-                      : "bg-zinc-800/80 text-zinc-400 group-hover:text-white group-hover:bg-zinc-700/80"
+                      ? "bg-blue-500/20 text-blue-600 dark:text-blue-400"
+                      : "bg-zinc-100 dark:bg-zinc-800/80 text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700/80"
                   )}
                 >
                   <Icon className="w-4 h-4" />
@@ -121,7 +121,7 @@ const Index: React.FC<IndexProps> = ({ setIsActive }) => {
               <ChevronRight
                 className={cn(
                   "w-4 h-4 transition-transform group-hover:translate-x-0.5",
-                  isActive ? "text-blue-400" : "text-zinc-500 group-hover:text-zinc-300"
+                  isActive ? "text-blue-600 dark:text-blue-400" : "text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-zinc-300"
                 )}
               />
             </Link>

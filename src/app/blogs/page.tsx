@@ -33,10 +33,10 @@ export default function BlogPage() {
         {posts.map((post, index) => (
           <RevealAnimation key={post.slug} delay={index * 0.1}>
             <Link href={`/blogs/${post.slug}`}>
-              <Card className="h-full bg-black/40 border-zinc-800 backdrop-blur-sm hover:border-purple-500/50 transition-colors group overflow-hidden">
+              <Card className="h-full bg-white/80 dark:bg-black/40 border-zinc-200 dark:border-zinc-800 backdrop-blur-sm hover:border-purple-500/50 transition-colors group overflow-hidden shadow-sm dark:shadow-none">
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
-                    <Badge variant="outline" className="border-purple-500/30 text-purple-400">
+                    <Badge variant="outline" className="border-purple-500/30 text-purple-600 dark:text-purple-400">
                       {post.metadata.tags?.[0] || "Blog"}
                     </Badge>
                     <span className="text-xs text-zinc-500 flex items-center gap-1">
@@ -44,10 +44,10 @@ export default function BlogPage() {
                       {post.metadata.publishedAt}
                     </span>
                   </div>
-                  <CardTitle className="text-xl group-hover:text-purple-400 transition-colors">
+                  <CardTitle className="text-xl text-zinc-900 dark:text-zinc-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                     {post.metadata.title}
                   </CardTitle>
-                  <CardDescription className="line-clamp-2">
+                  <CardDescription className="line-clamp-2 text-zinc-600 dark:text-zinc-400">
                     {post.metadata.summary}
                   </CardDescription>
                 </CardHeader>

@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 import { useMousePosition } from "@/utils/mouse";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
 
 interface ParticlesProps {
   className?: string;
@@ -20,6 +21,7 @@ export default function Particles({
   ease = 50,
   refresh = false,
 }: ParticlesProps) {
+  const { resolvedTheme } = useTheme();
   const pathname = usePathname();
   const isBlogPost = pathname.startsWith("/blogs/") && pathname !== "/blogs";
 
@@ -130,7 +132,10 @@ export default function Particles({
       context.current.translate(translateX, translateY);
       context.current.beginPath();
       context.current.arc(x, y, size, 0, 2 * Math.PI);
-      context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+      const isLight = resolvedTheme === "light";
+      context.current.fillStyle = isLight
+        ? `rgba(71, 85, 105, ${alpha * 0.6})`
+        : `rgba(255, 255, 255, ${alpha})`;
       context.current.fill();
       context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
 

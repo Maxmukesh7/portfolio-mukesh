@@ -43,20 +43,20 @@ export default function ProjectsSection() {
       >
         <Badge
           variant="outline"
-          className="px-4 py-1.5 text-xs font-mono tracking-widest uppercase bg-purple-500/10 border-purple-500/30 text-purple-400 rounded-full inline-flex items-center gap-2"
+          className="px-4 py-1.5 text-xs font-mono tracking-widest uppercase bg-purple-500/10 border-purple-500/30 text-purple-600 dark:text-purple-400 rounded-full inline-flex items-center gap-2"
         >
           <Sparkles className="w-3.5 h-3.5" />
           Featured Work
         </Badge>
 
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white font-display">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-white font-display">
           Featured{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-300 to-pink-400">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-300 dark:to-pink-400">
             Projects
           </span>
         </h2>
 
-        <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-400 leading-relaxed">
+        <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
           These are some of the software applications I&apos;ve built to solve
           real-world problems using modern technologies.
         </p>
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="backdrop-blur-xl bg-zinc-900/60 border border-white/10 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl hover:border-blue-500/30 transition-all duration-500 group relative overflow-hidden"
+              className="backdrop-blur-md bg-white/55 hover:bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/70 dark:border-white/10 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl dark:shadow-2xl hover:border-blue-500/40 transition-all duration-500 group relative overflow-hidden"
             >
               {/* Radial Top Glow Accent */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-purple-500/0 rounded-full blur-3xl group-hover:from-blue-500/20 transition-all pointer-events-none" />
@@ -87,7 +87,7 @@ export default function ProjectsSection() {
                 <Dialog>
                   <DialogTrigger asChild>
                     <div className="w-full lg:w-1/2 flex items-center justify-center">
-                      <div className="w-full relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group/img cursor-pointer">
+                      <div className="w-full relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-white/10 shadow-xl dark:shadow-2xl group/img cursor-pointer bg-zinc-100 dark:bg-zinc-900">
                         <div className="relative w-full h-auto overflow-hidden rounded-2xl">
                           <Image
                             src={project.src}
@@ -132,37 +132,37 @@ export default function ProjectsSection() {
                     <div className="flex items-center justify-between">
                       <Badge
                         variant="outline"
-                        className="px-3 py-1 text-xs font-mono tracking-wider bg-blue-500/10 border-blue-500/30 text-blue-400 rounded-full"
+                        className="px-3 py-1 text-xs font-mono tracking-wider bg-blue-500/10 border-blue-500/30 text-blue-600 dark:text-blue-400 rounded-full"
                       >
                         {project.category}
                       </Badge>
-                      <span className="text-xs font-mono text-zinc-500">
+                      <span className="text-xs font-mono text-zinc-400 dark:text-zinc-500">
                         0{index + 1}
                       </span>
                     </div>
 
                     {/* Project Title */}
-                    <h3 className="text-2xl sm:text-3xl font-bold text-white font-display tracking-tight group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white font-display tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
                       {project.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-zinc-300 text-sm sm:text-base leading-relaxed font-sans">
+                    <p className="text-zinc-600 dark:text-zinc-300 text-sm sm:text-base leading-relaxed font-sans">
                       {project.description}
                     </p>
 
                     {/* Key Features Grid */}
                     <div className="pt-2">
-                      <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-2.5">
+                      <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2.5">
                         Key Features
                       </h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {project.features.map((feature) => (
                           <div
                             key={feature}
-                            className="flex items-center gap-2 text-xs sm:text-sm text-zinc-200"
+                            className="flex items-center gap-2 text-xs sm:text-sm text-zinc-700 dark:text-zinc-200"
                           >
-                            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                            <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
                             <span>{feature}</span>
                           </div>
                         ))}
@@ -171,7 +171,7 @@ export default function ProjectsSection() {
 
                     {/* Tech Stack Badges */}
                     <div className="pt-2">
-                      <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-2.5">
+                      <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2.5">
                         Tech Stack
                       </h4>
                       <div className="flex flex-wrap gap-2">
@@ -179,7 +179,7 @@ export default function ProjectsSection() {
                           <Badge
                             key={tech}
                             variant="secondary"
-                            className="bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 border border-white/10 text-xs font-normal px-2.5 py-1 rounded-lg"
+                            className="bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800/80 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-white/10 text-xs font-normal px-2.5 py-1 rounded-lg"
                           >
                             {tech}
                           </Badge>
@@ -189,7 +189,7 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Action Links & Buttons */}
-                  <div className="pt-4 flex flex-wrap items-center gap-3 border-t border-white/10">
+                  <div className="pt-4 flex flex-wrap items-center gap-3 border-t border-zinc-200 dark:border-white/10">
                     {project.live && (
                       <Link href={project.live} target="_blank" rel="noopener noreferrer">
                         <Button
@@ -207,7 +207,7 @@ export default function ProjectsSection() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="rounded-xl px-5 py-2.5 text-xs font-medium border-white/15 bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 hover:text-white gap-2"
+                          className="rounded-xl px-5 py-2.5 text-xs font-medium border-zinc-300 dark:border-white/15 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800/80 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white gap-2"
                         >
                           <SiGithub className="w-4 h-4" />
                           <span>GitHub</span>
@@ -220,7 +220,7 @@ export default function ProjectsSection() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="rounded-xl px-5 py-2.5 text-xs font-medium border-purple-500/30 bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 gap-2"
+                          className="rounded-xl px-5 py-2.5 text-xs font-medium border-purple-500/30 bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-300 gap-2"
                         >
                           <BookOpen className="w-3.5 h-3.5" />
                           <span>Documentation</span>

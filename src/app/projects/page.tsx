@@ -62,15 +62,15 @@ const PROJECTS = [
 function Page() {
   return (
     <>
-      <div className="container mx-auto md:px-[50px] xl:px-[150px] text-zinc-300 h-full">
-        <h1 className="text-4xl mt-[100px] mb-[50px]">Tüm Projelerim</h1>
+      <div className="container mx-auto md:px-[50px] xl:px-[150px] text-zinc-800 dark:text-zinc-300 h-full">
+        <h1 className="text-4xl mt-[100px] mb-[50px] font-bold text-zinc-900 dark:text-white">All Projects</h1>
         <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 place-content-around pb-20">
           {PROJECTS.map((project) => (
             <li
-              className="w-[300px] h-[400px] border-[.5px] rounded-md border-zinc-700 bg-black/40 overflow-hidden hover:border-zinc-500 transition-colors"
+              className="w-[300px] h-[400px] border rounded-2xl border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-black/40 overflow-hidden hover:border-blue-500/40 transition-all shadow-md dark:shadow-none"
               key={project.id}
             >
-              <div className="h-[200px] bg-zinc-900/50">
+              <div className="h-[200px] bg-zinc-100 dark:bg-zinc-900/50">
                 {project.images.length > 0 ? (
                   <Splide
                     options={{
@@ -98,24 +98,24 @@ function Page() {
                     ))}
                   </Splide>
                 ) : (
-                  <div className="w-full h-full flex justify-center items-center text-zinc-600 text-sm">
-                    Görsel Yok
+                  <div className="w-full h-full flex justify-center items-center text-zinc-400 dark:text-zinc-600 text-sm">
+                    No Image
                   </div>
                 )}
               </div>
               <div className="p-5 flex flex-col justify-between h-[200px]">
                 <div>
-                  <h2 className="text-lg font-semibold text-white mb-2 line-clamp-1">{project.name}</h2>
-                  <p className="text-xs text-zinc-400 line-clamp-4 leading-relaxed">
+                  <h2 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2 line-clamp-1">{project.name}</h2>
+                  <p className="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-4 leading-relaxed">
                     {project.description}
                   </p>
                 </div>
                 <Link
                   href={project.link}
                   target="_blank"
-                  className="text-xs text-blue-400 hover:text-blue-300 mt-4 inline-block font-mono bg-blue-500/10 px-3 py-1.5 rounded-md w-fit border border-blue-500/20"
+                  className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 mt-4 inline-block font-mono bg-blue-500/10 px-3 py-1.5 rounded-md w-fit border border-blue-500/20"
                 >
-                  Projeye Git →
+                  View Project →
                 </Link>
               </div>
             </li>

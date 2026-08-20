@@ -141,7 +141,7 @@ const CATEGORIES: Category[] = [
       },
       {
         name: "Express.js",
-        icon: <SiExpress className="w-7 h-7 text-white" />,
+        icon: <SiExpress className="w-7 h-7 text-zinc-800 dark:text-white" />,
         color: "#ffffff",
         glow: "rgba(255, 255, 255, 0.3)",
       },
@@ -195,7 +195,7 @@ const CATEGORIES: Category[] = [
       },
       {
         name: "GitHub",
-        icon: <FaGithub className="w-7 h-7 text-white" />,
+        icon: <FaGithub className="w-7 h-7 text-zinc-800 dark:text-white" />,
         color: "#ffffff",
         glow: "rgba(255, 255, 255, 0.3)",
       },
@@ -280,19 +280,19 @@ export default function SkillsSection() {
         >
           <Badge
             variant="outline"
-            className="px-4 py-1.5 text-xs font-mono tracking-widest uppercase bg-blue-500/10 border-blue-500/30 text-blue-400 rounded-full inline-flex items-center gap-2"
+            className="px-4 py-1.5 text-xs font-mono tracking-widest uppercase bg-blue-500/10 border-blue-500/30 text-blue-500 dark:text-blue-400 rounded-full inline-flex items-center gap-2"
           >
             My Tech Stack
           </Badge>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white font-display">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-white font-display">
             Skills &amp;{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 dark:from-blue-400 dark:via-indigo-300 dark:to-purple-400">
               Technologies
             </span>
           </h2>
 
-          <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-400 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
             I enjoy building modern, scalable, and high-performance applications
             using the following technologies.
           </p>
@@ -307,21 +307,21 @@ export default function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: catIndex * 0.1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="backdrop-blur-xl bg-zinc-900/60 border border-white/10 rounded-3xl p-6 sm:p-7 shadow-2xl hover:border-blue-500/30 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+              className="backdrop-blur-md bg-white/40 hover:bg-white/55 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-white/10 rounded-3xl p-6 sm:p-7 shadow-lg dark:shadow-2xl hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
             >
               {/* Top Card Glow Accent */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-all pointer-events-none" />
 
               <div>
                 {/* Category Header */}
-                <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+                <div className="flex items-center justify-between mb-6 border-b border-zinc-200/60 dark:border-white/10 pb-4">
                   <div className="flex items-center gap-3">
                     <div
                       className={`p-2.5 rounded-2xl border ${category.iconBg} shrink-0`}
                     >
                       {category.icon}
                     </div>
-                    <h3 className="text-lg font-bold text-white font-display tracking-tight">
+                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white font-display tracking-tight">
                       {category.title}
                     </h3>
                   </div>
@@ -341,9 +341,9 @@ export default function SkillsSection() {
                             delay: skillIndex * 0.3,
                           }}
                           whileHover={{ scale: 1.1, y: -6 }}
-                          className="flex flex-col items-center justify-center p-3.5 rounded-2xl bg-zinc-800/50 border border-white/10 hover:border-white/20 transition-all cursor-pointer group/skill relative"
+                          className="flex flex-col items-center justify-center p-3.5 rounded-2xl bg-white/45 hover:bg-white/75 dark:bg-zinc-800/50 border border-white/70 dark:border-white/10 hover:border-zinc-300 dark:hover:border-white/20 transition-all cursor-pointer group/skill relative shadow-sm dark:shadow-none backdrop-blur-sm"
                           style={{
-                            boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+                            boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
                           }}
                         >
                           {/* Individual Skill Icon */}
@@ -358,7 +358,7 @@ export default function SkillsSection() {
                             {skill.icon}
                           </div>
 
-                          <span className="text-[11px] font-medium text-zinc-300 mt-2 text-center truncate w-full group-hover/skill:text-white transition-colors">
+                          <span className="text-[11px] font-medium text-zinc-700 dark:text-zinc-300 mt-2 text-center truncate w-full group-hover/skill:text-zinc-900 dark:group-hover/skill:text-white transition-colors">
                             {skill.name}
                           </span>
                         </motion.div>
